@@ -1,0 +1,66 @@
+  <h1  style="text-align:center">
+   {{ title }}
+  </h1>
+
+<div style="background-color: blue; color: white;width: 800px;height: 1000px;">
+  <form [formGroup]="aform" style="margin-right: 50px;">
+    <div class="form-group"> 
+      <select>
+        <option selected>ACCOUNT TYPE</option>
+  <option value="1">SAVINGS ACCOUNT</option>
+  <option value="2">CURRENT ACCOUNT</option>
+  <option value="3">SALARY ACCOUNT</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="fname">FIRSTNAME</label>
+      <input type="text" class="form-control" id="fname" formControlName="fname">
+    </div>
+    <div class="form-group">
+      <label for="lname">LASTNAME</label>
+      <input type="text" class="form-control" id="lname" formControlName="lname">
+    </div>
+    <div class="form-group">
+      <h2 style="font-size: smaller;">GENDER</h2>
+      <label for="gender">MALE</label>
+      <input type="radio" id="gender">
+      <label for="gender">FEMALE</label>
+      <input type="radio" id="gender">
+      <label for="gender">OTHERS</label>
+      <input type="radio" id="gender">
+    </div>
+    <div class="form-group">
+      <label for="age">AGE</label>
+      <input type="text" class="form-control" id="age" formControlName="age">
+    </div>
+    <div class="form-group">
+      <label for="dob">DATE OF BIRTH</label>
+      <input type="date" class="form-control" id="dob" formControlName="dob">
+    </div>
+    <div class="form-group">
+      <label for="cnum">CONTACT NUMBER</label>
+      <input type="text" class="form-control" id="cnum" formControlName="cnum">
+    </div>
+    <div class="form-group">
+      <label for="anum">ADHAR NUMBER</label>
+      <input type="text" class="form-control" id="anum" formControlName="anum">
+    </div>
+    <div class="form-group">
+      <label for="adres">ADDRESS</label>
+      <input type="text" class="form-control" id="adres" formControlName="adres">
+    </div>
+    <div class="form-group">
+      <label for="city">CITY</label>
+      <input type="text" class="form-control" id="city" formControlName="city">
+    </div>
+    <div class="form-group">
+      <label for="code">PIN CODE</label>
+      <input type="text" class="form-control" id="code" formControlName="code">
+    </div>
+    
+    <button class="btn btn-primary" type="submit">CREATE</button>
+
+
+  </form>
+</div>
+<router-outlet></router-outlet>
