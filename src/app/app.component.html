@@ -1,10 +1,13 @@
+ <div class="main">
   <h1  style="text-align:center">
-   {{ title }}
-  </h1>
+    {{ title }}
+   </h1>
 
-<div style="background-color: blue; color: white;width: 800px;height: 1000px;">
-  <form [formGroup]="aform" style="margin-right: 50px;">
+
+<div class="create" style="background-color: blueviolet; color: white;width: 600px;">
+  <form [formGroup]="aform" style="margin-left: 10px;margin-right: 10px;">
     <div class="form-group"> 
+      <label for="type">ACCOUNT TYPE:</label><br>
       <select>
         <option selected>ACCOUNT TYPE</option>
   <option value="1">SAVINGS ACCOUNT</option>
@@ -12,55 +15,73 @@
   <option value="3">SALARY ACCOUNT</option>
       </select>
     </div>
-    <div class="form-group">
-      <label for="fname">FIRSTNAME</label>
-      <input type="text" class="form-control" id="fname" formControlName="fname">
+   
+    <div class="form-group" style="margin-left: 150px;">
+      <label for="fname">FIRSTNAME:</label>
+      <input type="text" class="form-control" id="fname" formControlName="fname" placeholder="ENTER THE FIRST NAME">
+      <small style="color: red;" *ngIf="fname.invalid && fname.touched">*FirstName is Required </small>
+    
     </div>
     <div class="form-group">
       <label for="lname">LASTNAME</label>
-      <input type="text" class="form-control" id="lname" formControlName="lname">
+      <input type="text" class="form-control" id="lname" formControlName="lname" placeholder="ENTER THE LAST NAME">
+      <small style="color: red;" *ngIf="lname.invalid && lname.touched">*LastName is Required </small>
+      
     </div>
-    <div class="form-group">
-      <h2 style="font-size: smaller;">GENDER</h2>
-      <label for="gender">MALE</label>
-      <input type="radio" id="gender">
-      <label for="gender">FEMALE</label>
-      <input type="radio" id="gender">
-      <label for="gender">OTHERS</label>
-      <input type="radio" id="gender">
+    <div class="form-group" style="margin-left: 100px;">
+      <h2 style="font-size: large;">GENDER</h2>
+      <label for="gender1">MALE</label>
+      <input type="radio" id="gender1">
+      <label for="gender2">FEMALE</label>
+      <input type="radio" id="gender2">
+      <label for="gender3">OTHERS</label>
+      <input type="radio" id="gender3">
+      
     </div>
     <div class="form-group">
       <label for="age">AGE</label>
-      <input type="text" class="form-control" id="age" formControlName="age">
+      <input type="text" class="form-control" id="age" formControlName="age" placeholder="ENTER THE AGE">
+      <small style="color: red;" *ngIf="age.invalid && age.touched">*Age is Required </small>
+      
+     
     </div>
-    <div class="form-group">
+    <div class="form-group" style="margin-left: 100px;">
       <label for="dob">DATE OF BIRTH</label>
       <input type="date" class="form-control" id="dob" formControlName="dob">
+      <small style="color: red;" *ngIf="dob.invalid && dob.touched">*DOB is Required </small>
+      
+
     </div>
     <div class="form-group">
       <label for="cnum">CONTACT NUMBER</label>
-      <input type="text" class="form-control" id="cnum" formControlName="cnum">
+      <input type="text" class="form-control" id="cnum" formControlName="cnum" placeholder="ENTER THE MOBILE NUMBER">
+      <small style="color: red;" *ngIf="cnum.invalid && cnum.touched">*Mobile Number Is Required</small>
     </div>
-    <div class="form-group">
-      <label for="anum">ADHAR NUMBER</label>
-      <input type="text" class="form-control" id="anum" formControlName="anum">
+    <div class="form-group" style="margin-left: 100px;">
+      <label for="anum">AADHAAR NUMBER</label>
+      <input type="text" class="form-control" id="anum" formControlName="anum" placeholder="ENTER THE AADHAAR NUMBER">
+      <small style="color:red;" *ngIf="anum.invalid && anum.touched">*AADHAAR Number is Required</small>
     </div>
     <div class="form-group">
       <label for="adres">ADDRESS</label>
-      <input type="text" class="form-control" id="adres" formControlName="adres">
+      <input type="text" class="form-control" id="adres" formControlName="adres" placeholder="ENTER THE DOOR NUMBER">
+      <small style="color: red;" *ngIf="adres.invalid && adres.touched">*Address is Required</small>
     </div>
-    <div class="form-group">
-      <label for="city">CITY</label>
-      <input type="text" class="form-control" id="city" formControlName="city">
+    <div class="form-group" style="margin-left: 100px;">
+      <label for="cty">CITY</label>
+      <input type="text" class="form-control" id="cty" formControlName="cty" placeholder="ENTER THE CITY">
+      <small style="color:red;" *ngIf="cty.invlaid && cty.touched">*City Name Is Required</small>
     </div>
     <div class="form-group">
       <label for="code">PIN CODE</label>
-      <input type="text" class="form-control" id="code" formControlName="code">
+      <input type="text" class="form-control" id="code" formControlName="code" placeholder="ENTER THE POSTAL CODE">
+      <small style="color: red;" *ngIf="code.invalid && code.touched">*PIN Code Is Required</small>
     </div>
-    
-    <button class="btn btn-primary" type="submit">CREATE</button>
-
-
+    <br/>
+    <div style="margin-left: 200px;">
+      <button class="btn btn-primary" type="submit">CREATE</button>
+    </div>
   </form>
+</div>
 </div>
 <router-outlet></router-outlet>

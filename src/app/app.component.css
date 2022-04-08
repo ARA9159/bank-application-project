@@ -1,6 +1,9 @@
-div{
+.create{
     padding: auto;
-    margin-left: 100px;
-
+    margin-left: 500px;
+}
+.form-group{
+    display: inline-table;
+    padding: 10px;
     
 }
